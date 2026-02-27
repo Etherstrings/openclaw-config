@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "daily-tech-briefing",
+      "name": "每日科技简报",
+      "schedule": "0 9 * * *",
+      "action": {
+        "type": "message",
+        "channel": "telegram",
+        "target": "me",
+        "message": "📰 科技简报 - 已自动生成"
+      },
+      "enabled": true,
+      "description": "每天早上9:00生成科技+金融简报并推送"
+    },
+    {
+      "id": "github-trending",
+      "name": "GitHub热门项目",
+      "schedule": "0 9 * * *",
+      "action": {
+        "type": "message",
+        "channel": "telegram",
+        "target": "me",
+        "message": "📊 GitHub热门项目 - 已自动生成"
+      },
+      "enabled": true,
+      "description": "每天早上9:00生成GitHub热门项目并推送"
+    }
+  ]
+}
