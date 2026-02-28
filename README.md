@@ -26,7 +26,8 @@ openclaw-config/
 │   └── restore.sh             # 恢复脚本
 └── versions/                   # 📦 版本历史（完整副本）
     ├── 2026-02-27-v1/        # 第1个版本
-    └── 2026-02-28-v2/        # 第2个版本（含A/B路由）
+    ├── 2026-02-28-v2/        # 第2个版本（含A/B路由）
+    └── 2026-02-28-v3/        # 第3个版本（含TODO提醒）
 ```
 
 ---
@@ -50,6 +51,7 @@ openclaw cron list
 确认以下任务已启用：
 - 每日科技简报（每天 9:00）
 - GitHub热门项目（每天 9:00）
+- 晚间TODO提醒（每天 20:00）
 
 ### 步骤 3：查看日报模板
 ```bash
@@ -64,24 +66,24 @@ cd ~/Projects/openclaw-config
 ls versions/
 
 # 查看版本详情
-cat versions/2026-02-28-v2/VERSION.md
+cat versions/2026-02-28-v3/VERSION.md
 
 # 恢复配置
-cp versions/2026-02-28-v2/config/* ~/.openclaw/
-cp versions/2026-02-28-v2/workspace/* ~/.openclaw/workspace/
+cp versions/2026-02-28-v3/config/* ~/.openclaw/
+cp versions/2026-02-28-v3/workspace/* ~/.openclaw/workspace/
 ```
 
 ---
 
 ## 🔍 如何加载指定版本
 
-**比如你说"加载2026年2月28日的2号版本"**
+**比如你说"加载2026年2月28日的3号版本"**
 
 ```bash
 cd ~/Projects/openclaw-config
-cat versions/2026-02-28-v2/VERSION.md
-cp versions/2026-02-28-v2/config/* ~/.openclaw/
-cp versions/2026-02-28-v2/workspace/* ~/.openclaw/workspace/
+cat versions/2026-02-28-v3/VERSION.md
+cp versions/2026-02-28-v3/config/* ~/.openclaw/
+cp versions/2026-02-28-v3/workspace/* ~/.openclaw/workspace/
 ```
 
 ---
@@ -91,7 +93,8 @@ cp versions/2026-02-28-v2/workspace/* ~/.openclaw/workspace/
 | 版本 | 日期 | 说明 | 状态 |
 |------|------|------|------|
 | v1 | 2026-02-27 | 初始版本，15条科技简报+深度点评 | ✅ |
-| v2 | 2026-02-28 | A/B路由协议+定时任务+格式优化 | ✅ 最新 |
+| v2 | 2026-02-28 | A/B路由协议+定时任务+格式优化 | ✅ |
+| v3 | 2026-02-28 | 晚间TODO提醒+最新配置 | ✅ 最新 |
 
 ---
 
